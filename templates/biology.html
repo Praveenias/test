@@ -1,0 +1,186 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Testpress</title>
+        <link href="{% static 'chemistry.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <script src="https://stackpath.bootstrapcdn.com /bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+<body>
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>BIOLOGY MCQ(Answer all question*)</h4>
+                        <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+                    </div>
+
+                </div>
+                <form action="thank" method="post">
+                    {% csrf_token %}
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a1.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a1.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2" >
+                        <label class="radio"> <input type="radio" name="qno1" value='{{a1.Option1}}' required=""> <span>{{a1.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno1" value='{{a1.Option2}}' required=""> <span>{{a1.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno1" value='{{a1.Option3}}' required=""> <span>{{a1.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno1" value='{{a1.Option4}}' required=""> <span>{{a1.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a2.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a2.Question}} </h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno2" value='{{a2.Option1}}' required=""> <span>{{a2.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno2" value='{{a2.Option2}}' required=""> <span>{{a2.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno2" value='{{a2.Option3}}' required=""> <span>{{a2.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno2" value='{{a2.Option4}}' required=""> <span>{{a2.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a3.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a3.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno3" value='{{a3.Option1}}' required=""> <span>{{a3.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno3" value='{{a3.Option2}}' required=""> <span> {{a3.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno3" value='{{a3.Option3}}' required=""> <span>{{a3.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno3" value='{{a3.Option4}}' required=""> <span>{{a3.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a4.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a4.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno4" value='{{a4.Option1}}' required=""> <span>{{a4.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno4" value='{{a4.Option2}}' required=""> <span>{{a4.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno4" value='{{a4.Option3}}' required=""> <span>{{a4.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno4" value='{{a4.Option4}}' required=""> <span>{{a4.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a5.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a5.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno5" value='{{a5.Option1}}' required=""> <span>{{a5.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno5" value='{{a5.Option2}}' required=""> <span>{{a5.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno5" value='{{a5.Option3}}' required=""> <span>{{a5.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno5" value='{{a5.Option4}}' required=""> <span>{{a5.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a6.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a6.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno6" value='{{a6.Option1}}' required=""> <span>{{a6.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno6" value='{{a6.Option2}}' required=""> <span>{{a6.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno6" value='{{a6.Option3}}' required=""> <span>{{a6.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno6" value='{{a6.Option4}}' required=""> <span>{{a6.Option4}}</span>
+                        </label>
+
+
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a7.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a7.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno7" value='{{a7.Option1}}' required=""> <span>{{a7.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno7" value='{{a7.Option2}}' required=""> <span>{{a7.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno7" value='{{a7.Option3}}' required=""> <span>{{a7.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno7" value='{{a7.Option4}}' required=""> <span>{{a7.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a8.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a8.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno8" value='{{a8.Option1}}' required=""> <span>{{a8.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno8" value='{{a8.Option2}}' required=""> <span>{{a8.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno8" value='{{a8.Option3}}' required=""> <span>{{a8.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno8" value='{{a8.Option4}}' required=""> <span>{{a8.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a9.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a9.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno9" value='{{a9.Option1}}' required=""> <span>{{a9.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno9" value='{{a9.Option2}}' required=""> <span>{{a9.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno9" value='{{a9.Option3}}' required=""> <span>{{a9.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno9" value='{{a9.Option4}}' required=""> <span>{{a9.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">{{a10.id}}</h3>
+                        <h5 class="mt-1 ml-2">{{a10.Question}}</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno10" value='{{a10.Option1}}' required=""> <span>{{a10.Option1}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno10" value='{{a10.Option2}}' required=""> <span>{{a10.Option2}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno10" value='{{a10.Option3}}' required=""> <span>{{a10.Option3}}</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno10" value='{{a10.Option4}}' required=""> <span>{{a10.Option4}}</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                        <input type="submit" class="btn btn-primary border-success align-items-center btn-success" placeholder="checkresult">
+                        </div>
+                </div>
+                </form>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

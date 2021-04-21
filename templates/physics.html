@@ -1,0 +1,186 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Testpress</title>
+        <link href="{% static 'physics.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <script src="https://stackpath.bootstrapcdn.com /bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+<body>
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>Physics MCQ(Answer all question*)</h4>
+                        <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+                    </div>
+
+                </div>
+                <form action="thank" method="post">
+                    {% csrf_token %}
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.1</h3>
+                        <h5 class="mt-1 ml-2">Choose correct formula?</h5>
+                    </div>
+                    <div class="ans ml-2" >
+                        <label class="radio"> <input type="radio" name="qno1" value='E=mc2' required=""> <span>E=mc2</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno1" value='E=mnb' required=""> <span>E=mnb</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno1" value='E=klo' required=""> <span>E=klo</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno1" value='E=io9' required=""> <span>E=io9</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.2</h3>
+                        <h5 class="mt-1 ml-2">Choose the solid state?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno2" value='sand' required=""> <span>Sand</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno2" value='water' required=""> <span>Water</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno2" value='brick' required=""> <span>Brick</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno2" value='mercury' required=""> <span>Mercury</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.3</h3>
+                        <h5 class="mt-1 ml-2">Gravitational force direction?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno3" value='up' required=""> <span>up</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno3" value='bottom' required=""> <span>bottom</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno3" value='top' required=""> <span>top</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno3" value='dowm' required=""> <span>down</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.4</h3>
+                        <h5 class="mt-1 ml-2">Which is the most popular kitchen fuel?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno4" value='LPG' required=""> <span>LPG</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno4" value='kerosene' required=""> <span>kerosene</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno4" value='coal' required=""> <span>coal</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno4" value='firewood' required=""> <span>firewood</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.5</h3>
+                        <h5 class="mt-1 ml-2">Which is the following is the odd one out?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno5" value='Petroleum' required=""> <span>Petroleum</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno5" value='Electricity' required=""> <span> Electricity</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno5" value='Coal' required=""> <span>Coal</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno5" value='CNG' required=""> <span>CNG</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.6</h3>
+                        <h5 class="mt-1 ml-2">Which of the following  used to produce negative energy?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno6" value='Electron' required=""> <span>Electron</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno6" value='Neutron' required=""> <span>Neutron</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno6" value='Atom' required=""> <span>Atom</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno6" value='Excited' required=""> <span>Excited</span>
+                        </label>
+                        
+
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.7</h3>
+                        <h5 class="mt-1 ml-2">Which of the following is a component bio gas?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno7" value='methane' required=""> <span>methane</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno7" value='LPG' required=""> <span>LPG</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno7" value='CNG' required=""> <span>CNG</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno7" value='hydro' required=""> <span>sulphate</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.8</h3>
+                        <h5 class="mt-1 ml-2">Which is the largest energy source used in india?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno8" value='CNG' required=""> <span>CNG</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno8" value='LPG' required=""> <span>LPG</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno8" value='coal' required=""> <span>coal</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno8" value="bio-gas" required=""> <span>bio-gas</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.9</h3>
+                        <h5 class="mt-1 ml-2">Which of the following used in solar cookers for trapping solar energy?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno9" value='solar panels' required=""> <span>solar</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno9" value='silicon' required=""> <span>silicon</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno9" value='mirrors' required=""> <span>mirrors</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno9" value='above' required=""> <span>above</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.10</h3>
+                        <h5 class="mt-1 ml-2">Which of the following is the ultimate source of energy for us?</h5>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="qno10" value='LPG' required=""> <span>LPG</span>
+                        </label>         
+                        <label class="radio"> <input type="radio" name="qno10" value='nuclear' required=""> <span>nuclear</span>
+                        </label>
+                        <label class="radio"> <input type="radio" name="qno10" value='solar' required=""> <span>solar</span>
+                        </label>                  
+                        <label class="radio"> <input type="radio" name="qno10" value='CNG' required=""> <span>CNG</span>
+                        </label>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                        <input type="submit" class="btn btn-primary border-success align-items-center btn-success" placeholder="checkresult">
+                        </div>
+                </div>
+                </form>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

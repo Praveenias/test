@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <title>Test Press</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1 class="display-3">Thank You!</h1>
+
+            <hr>
+            <div>
+					{% for message in messages %}
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                    <p class="lead"><strong>Your mark is</strong> </p>
+					<h3>{{message}}/10</h3>
+                    {% endif %}
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                    <h3>Time taken is {{message}}</h3>
+
+                    {% endif %}
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+
+                    <h3>{{message}}</h3>
+                    {% endif %}
+					{% endfor %}
+
+            </div>
+            <p>
+              Having trouble? <a href="/">Contact us</a>
+            </p>
+            <p class="lead">
+              <a class="btn btn-primary btn-sm" href="/" role="button">Continue to homepage</a>
+            </p>
+          </div>
+    </body>
+</html>
